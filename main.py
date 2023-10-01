@@ -22,13 +22,35 @@
 
 #2.Користувач вводить з клавіатури рядок і символ для пошуку.Скільки разів у рядку зустрічається потрібний символ?
 
+#string = input("Enter a string: ")
+#char = input("Enter symbol for search: ")
+
+#count = 0
+
+#for c in string:
+    #if c == char:
+    # count += 1
+
+#print(f"The symbol '{char}' appears {count} times in the string.")
+
+######################################
+
+#3.Користувач вводить з клавіатури рядок, слово для пошуку, слово для заміни. Зробіть у рядку заміну одного слова на інше.
+
 string = input("Enter a string: ")
-char = input("Enter symbol for search: ")
+search_word = input("Enter the word to search for: ")
+replace_word = input("Enter the word to replace it with: ")
 
-count = 0
+words = string.split()
 
-for c in string:
-    if c == char:
-     count += 1
+modified_words = []
 
-print(f"The symbol '{char}' appears {count} times in the string.")
+for word in words:
+   if word == search_word:
+       modified_words.append(replace_word)
+   else:
+       modified_words.append(word)
+
+modified_string = " ".join(modified_words)
+
+print(modified_string)
